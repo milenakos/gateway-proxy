@@ -1420,9 +1420,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-websockets"
-version = "0.11.0"
+version = "0.11.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bad3d80d26e290444b67405d54661959107d3aadc6ecc35d717a626b5e208c51"
+checksum = "9fcaf159b4e7a376b05b5bfd77bfd38f3324f5fce751b4213bfc7eaa47affb4e"
 dependencies = [
  "aws-lc-rs",
  "base64",
@@ -1499,7 +1499,7 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 [[package]]
 name = "twilight-cache-inmemory"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "bitflags",
  "dashmap",
@@ -1510,7 +1510,7 @@ dependencies = [
 [[package]]
 name = "twilight-gateway"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "bitflags",
  "fastrand",
@@ -1530,7 +1530,7 @@ dependencies = [
 [[package]]
 name = "twilight-gateway-queue"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "tokio",
  "tracing",
@@ -1539,7 +1539,7 @@ dependencies = [
 [[package]]
 name = "twilight-http"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "fastrand",
  "http",
@@ -1562,7 +1562,7 @@ dependencies = [
 [[package]]
 name = "twilight-http-ratelimiting"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "tokio",
  "tracing",
@@ -1571,7 +1571,7 @@ dependencies = [
 [[package]]
 name = "twilight-model"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "bitflags",
  "serde",
@@ -1583,7 +1583,7 @@ dependencies = [
 [[package]]
 name = "twilight-validate"
 version = "0.16.0"
-source = "git+https://github.com/Gelbpunkt/twilight.git?branch=0.16#b567630354ae9d3a39d6bffabb6e8bba64a01f57"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
 dependencies = [
  "twilight-model",
 ]

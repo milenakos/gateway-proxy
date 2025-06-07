@@ -44,7 +44,7 @@ tokio = { version = "1", default-features = false, features = [
     "rt-multi-thread",
     "signal",
 ] }
-tokio-websockets = { version = "0.11", default-features = false, features = [
+tokio-websockets = { version = "0.11.3", default-features = false, features = [
     "nightly",
     "simd",
     "server",
@@ -54,18 +54,18 @@ tracing-subscriber = { version = "0.3", default-features = false, features = [
     "fmt",
     "std",
 ] }
-twilight-cache-inmemory = { git = "https://github.com/Gelbpunkt/twilight.git", branch = "0.16", default-features = false }
-twilight-gateway = { git = "https://github.com/Gelbpunkt/twilight.git", branch = "0.16", default-features = false, features = [
+twilight-cache-inmemory = { git = "https://github.com/TheCataliasTNT2k/twilight.git", branch = "0.16", default-features = false }
+twilight-gateway = { git = "https://github.com/TheCataliasTNT2k/twilight.git", branch = "0.16", default-features = false, features = [
     "rustls-webpki-roots",
     "rustls-aws_lc_rs",
 ] }
-twilight-gateway-queue = { git = "https://github.com/Gelbpunkt/twilight.git", branch = "0.16", default-features = false, features = [
+twilight-gateway-queue = { git = "https://github.com/TheCataliasTNT2k/twilight.git", branch = "0.16", default-features = false, features = [
 ] }
-twilight-http = { git = "https://github.com/Gelbpunkt/twilight.git", branch = "0.16", default-features = false, features = [
+twilight-http = { git = "https://github.com/TheCataliasTNT2k/twilight.git", branch = "0.16", default-features = false, features = [
     "rustls-webpki-roots",
     "rustls-aws_lc_rs",
 ] }
-twilight-model = { git = "https://github.com/Gelbpunkt/twilight.git", branch = "0.16" }
+twilight-model = { git = "https://github.com/TheCataliasTNT2k/twilight.git", branch = "0.16" }
 
 [features]
 default = ["simd"]
