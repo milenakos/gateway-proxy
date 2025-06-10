@@ -1499,7 +1499,7 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 [[package]]
 name = "twilight-cache-inmemory"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "bitflags",
  "dashmap",
@@ -1510,7 +1510,7 @@ dependencies = [
 [[package]]
 name = "twilight-gateway"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "bitflags",
  "fastrand",
@@ -1530,7 +1530,7 @@ dependencies = [
 [[package]]
 name = "twilight-gateway-queue"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "tokio",
  "tracing",
@@ -1539,7 +1539,7 @@ dependencies = [
 [[package]]
 name = "twilight-http"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "fastrand",
  "http",
@@ -1562,7 +1562,7 @@ dependencies = [
 [[package]]
 name = "twilight-http-ratelimiting"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "tokio",
  "tracing",
@@ -1571,7 +1571,7 @@ dependencies = [
 [[package]]
 name = "twilight-model"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "bitflags",
  "serde",
@@ -1583,7 +1583,7 @@ dependencies = [
 [[package]]
 name = "twilight-validate"
 version = "0.16.0"
-source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#3703d30c2048000c8c8ac1314d5829c72aed4ffc"
+source = "git+https://github.com/TheCataliasTNT2k/twilight.git?branch=0.16#b0ba40225672fd732ae5c0e974c1d05555f71df9"
 dependencies = [
  "twilight-model",
 ]
