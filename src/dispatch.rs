@@ -24,7 +24,7 @@ use crate::{
 
 pub type BroadcastMessage = (String, Option<SequenceInfo>);
 
-const TEN_SECONDS: Duration = Duration::from_secs(10);
+const UPDATE_INTERVAL: Duration = Duration::from_millis(500);
 
 pub async fn events(
     mut shard: Shard,
@@ -44,10 +44,10 @@ pub async fn events(
     let event_type_flags: EventTypeFlags = CONFIG.cache.clone().into();
 
     loop {
-        // Update metrics if the last update was more than 10s ago
+        // Update metrics if the last update was more than 0.5s ago
         let now = Instant::now();
 
-        if now.duration_since(last_metrics_update) > TEN_SECONDS {
+        if now.duration_since(last_metrics_update) > UPDATE_INTERVAL {
             let latencies = shard.latency().recent();
             let info = shard.state();
             update_shard_statistics(&shard_id_str, &shard_state, info, latencies);
@@ -168,8 +168,8 @@ pub fn update_shard_statistics(
         "shard" => shard_id.to_string()
     )
     .set(latency);
-    metrics::histogram!("gateway_shard_status", "shard" => shard_id.to_string())
-        .record(connection_status);
+    metrics::gauge!("gateway_shard_status", "shard" => shard_id.to_string())
+        .set(connection_status);
 
     let stats = shard_state.guilds.stats();
 
