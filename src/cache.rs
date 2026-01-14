@@ -1,10 +1,5 @@
-#[cfg(feature = "simd-json")]
-use halfbrown::hashmap;
 use serde::Serialize;
-#[cfg(not(feature = "simd-json"))]
-use serde_json::{to_string, Value as OwnedValue};
-#[cfg(feature = "simd-json")]
-use simd_json::{to_string, OwnedValue};
+use serde_json::Value as OwnedValue;
 use twilight_model::gateway::OpCode;
 
 use crate::model::JsonObject;
