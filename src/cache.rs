@@ -99,23 +99,24 @@ impl Guilds {
     }
 
     fn channels_in_guild(&self, guild_id: Id<GuildMarker>) -> Vec<Channel> {
-        self.0
+        let channel_ids: Vec<_> = self
+            .0
             .guild_channels(guild_id)
-            .map(|reference| {
-                reference
-                    .iter()
-                    .filter_map(|channel_id| {
-                        let channel = self.0.channel(*channel_id)?;
+            .map(|reference| reference.iter().copied().collect())
+            .unwrap_or_default();
 
-                        if channel.kind.is_thread() {
-                            None
-                        } else {
-                            Some(channel.value().clone())
-                        }
-                    })
-                    .collect()
+        channel_ids
+            .into_iter()
+            .filter_map(|channel_id| {
+                let channel = self.0.channel(channel_id)?;
+
+                if channel.kind.is_thread() {
+                    None
+                } else {
+                    Some(channel.value().clone())
+                }
             })
-            .unwrap_or_default()
+            .collect()
     }
 
     fn presences_in_guild(&self, guild_id: Id<GuildMarker>) -> Vec<Presence> {
@@ -306,23 +307,24 @@ impl Guilds {
     }
 
     fn threads_in_guild(&self, guild_id: Id<GuildMarker>) -> Vec<Channel> {
-        self.0
+        let channel_ids: Vec<_> = self
+            .0
             .guild_channels(guild_id)
-            .map(|reference| {
-                reference
-                    .iter()
-                    .filter_map(|channel_id| {
-                        let channel = self.0.channel(*channel_id)?;
+            .map(|reference| reference.iter().copied().collect())
+            .unwrap_or_default();
 
-                        if channel.kind.is_thread() {
-                            Some(channel.value().clone())
-                        } else {
-                            None
-                        }
-                    })
-                    .collect()
+        channel_ids
+            .into_iter()
+            .filter_map(|channel_id| {
+                let channel = self.0.channel(channel_id)?;
+
+                if channel.kind.is_thread() {
+                    Some(channel.value().clone())
+                } else {
+                    None
+                }
             })
-            .unwrap_or_default()
+            .collect()
     }
 
     pub fn get_guild_payloads<'a>(
