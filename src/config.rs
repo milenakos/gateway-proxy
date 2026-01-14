@@ -6,7 +6,6 @@ use serde_json::Error as JsonError;
 #[cfg(feature = "simd-json")]
 use simd_json::Error as JsonError;
 use tracing_subscriber::{filter::LevelFilter, reload};
-use twilight_cache_inmemory::ResourceType;
 use twilight_gateway::{EventTypeFlags, Intents};
 use twilight_model::gateway::presence::{Activity, Status};
 
@@ -138,57 +137,6 @@ impl From<Cache> for EventTypeFlags {
     }
 }
 
-impl From<Cache> for ResourceType {
-    fn from(cache: Cache) -> Self {
-        let mut resource_types = Self::GUILD | Self::USER_CURRENT;
-
-        if cache.channels {
-            resource_types |= Self::CHANNEL;
-        }
-
-        if cache.emojis {
-            resource_types |= Self::EMOJI;
-        }
-
-        if cache.current_member {
-            resource_types |= Self::MEMBER_CURRENT;
-        }
-
-        if cache.members {
-            resource_types |= Self::MEMBER;
-        }
-
-        if cache.presences {
-            resource_types |= Self::PRESENCE;
-        }
-
-        if cache.roles {
-            resource_types |= Self::ROLE;
-        }
-
-        if cache.scheduled_events {
-            resource_types |= Self::GUILD_SCHEDULED_EVENT;
-        }
-
-        if cache.stage_instances {
-            resource_types |= Self::STAGE_INSTANCE;
-        }
-
-        if cache.stickers {
-            resource_types |= Self::STICKER;
-        }
-
-        if cache.users {
-            resource_types |= Self::USER;
-        }
-
-        if cache.voice_states {
-            resource_types |= Self::VOICE_STATE;
-        }
-
-        resource_types
-    }
-}
 
 fn default_log_level() -> String {
     String::from("info")
